@@ -1,0 +1,11 @@
+{
+ "editor.defaultFormatter": null,
+ "editor.formatOnSave": false,
+ "editor.formatOnType": false,
+ "editor.codeActionsOnSave": {
+  "source.fixAll": "always"
+ },
+ "[vue]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+ },
+}

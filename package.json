@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "pnpm i&&nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
+    "nuxt": "^3.9.3",
+    "nuxt-quasar-ui": "^2.0.7",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.3",
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.9",
+    "quasar": "^2.14.3"
+  }
+}
