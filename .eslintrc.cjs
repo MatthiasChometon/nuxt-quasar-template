@@ -1,23 +1,15 @@
 module.exports = {
+	root: true,
 	env: {
-		es2021: true,
-		node: true
+			browser: true,
+			node: true,
 	},
-	extends: [
-		'prettier',
-		'eslint:all',
-		'plugin:@typescript-eslint/all',
-		'plugin:vue/vue3-recommended',
-		'@vue/eslint-config-typescript/recommended',
-		'@vue/eslint-config-prettier'
-	],
-	parser: '@typescript-eslint/parser',
+	parser: "vue-eslint-parser",
 	parserOptions: {
-		project: '',
-		ecmaVersion: 'latest',
-		sourceType: 'module'
+			parser: "@typescript-eslint/parser",
 	},
-	plugins: ['prettier', '@typescript-eslint'],
+	extends: ["@nuxt/eslint-config", "plugin:prettier/recommended", '@nuxtjs/eslint-config-typescript'],
+	plugins: [],
 	rules: {
 		'prettier/prettier': [
 			'error',
@@ -43,20 +35,23 @@ module.exports = {
 			}
 		},
 		{
-			files: ['*.ts'],
+			files: ['*.ts', '*.tsx'],
 			extends: 'standard-with-typescript',
 			rules: {
+				'multiline-ternary': 'off',
+				'react/prop-types': ['error'],
+				'@typescript-eslint/explicit-module-boundary-types': ['error'],
 				'space-before-function-paren': 'off',
 				'@typescript-eslint/space-before-function-paren': 'off',
 				'@typescript-eslint/member-delimiter-style': 'off',
+				'@typescript-eslint/explicit-function-return-type': 'error',
 				'@typescript-eslint/indent': 'off',
 				'no-tabs': 'off',
-				'@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
-				'@typescript-eslint/prefer-readonly-parameter-types': 'off',
-				'@typescript-eslint/no-magic-numbers': 'off',
-				'@typescript-eslint/explicit-member-accessibility': 'off',
-				'@typescript-eslint/parameter-properties': ['error', { 'prefer': 'parameter-property' }]
+				'@typescript-eslint/prefer-readonly': 'error',
+				'@typescript-eslint/array-type': ['error', { default: 'array' }],
+				'@typescript-eslint/unbound-method': 'off',
+				'@typescript-eslint/no-misused-promises': 'off'
 			}
 		}
 	]
-}
+};

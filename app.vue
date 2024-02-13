@@ -1,14 +1,9 @@
-
 <template>
- <div>
-  sqdqs
- </div>
+	<div>sqdqs</div>
 </template>
 
 <script setup lang="ts">
-  const test = ""
+const test = ''
 
-  function sdsd() {
-
-  }
+function sdsd() {}
 </script>
