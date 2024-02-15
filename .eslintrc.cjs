@@ -35,11 +35,17 @@ module.exports = {
 			}
 		},
 		{
-			files: ['*.ts', '*.tsx'],
+			files: ['*.vue'],
+			rules: {
+				'no-tabs': 'off',
+				'vue/html-indent': 'off'
+			}
+		},
+		{
+			files: ['*.ts'],
 			extends: 'standard-with-typescript',
 			rules: {
 				'multiline-ternary': 'off',
-				'react/prop-types': ['error'],
 				'@typescript-eslint/explicit-module-boundary-types': ['error'],
 				'space-before-function-paren': 'off',
 				'@typescript-eslint/space-before-function-paren': 'off',
